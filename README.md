@@ -1,3 +1,3 @@
 # DiscsAndDice
  
-[[./DiscsAndDice/Discs and Dice.md]]
+(/DiscsAndDice/Discs and Dice.md)
