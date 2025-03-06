@@ -26,7 +26,7 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/GameMath.excalidraw.md"
+                "file": "Excalidraw/Ideas.md"
               }
             }
           }
@@ -112,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Excalidraw/Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,6 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Excalidraw/Ideas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +151,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Excalidraw/Ideas.md"
+              }
             }
           }
         ]
@@ -170,7 +174,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "d9f7e7fc58c8d74a",
+  "active": "24f46e100287fd1e",
   "lastOpenFiles": [
     "Excalidraw/GameMath.excalidraw.md",
     "Gameplay.md",
