@@ -79,7 +79,7 @@ class World{
 					${Math.floor(255 - 42.5 * y_world)}
 					0)`;
 				let x,y;
-				[x,y]=pointToScreen([x_world,y_world],screen_target);
+				[x,y]=this.pointToScreen([x_world,y_world],screen_target);
 				context.beginPath();
 				context.arc(x,y,2,0,2*PI);
 				context.fill();
