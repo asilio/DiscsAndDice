@@ -5,7 +5,7 @@ Player has extra dice they can use anytime a roll is called for, but once used t
 When multiple dice are rolled, player chooses the die to use (allows control for certain penalties positioning)
 [Ideas](Excalidraw/Ideas.md)
 Terminology:
-With advantage \[ x \] means \[x\] bonus dice of the same type are rolled.
+With advantage \[x\] means \[x\] bonus dice of the same type are rolled.
 With disadvantage \[x\]  player loses the ability to choose and the lowest die is always picked from dice rolled.
 
 Player Features:
@@ -41,7 +41,7 @@ Critical failure: pop up and randomize new target within zone of current flight 
 
 Water: standard lose stroke and drop new disc at waterline. No critical successes? Or maybe a water skip with new throw target?
 
-Bushes: only hammer throw or critictal success can be thrown from the bushes. Will trap any low flying discs without a critical success. Max throw distance from bushes is sharply reduced.
+Bushes: only hammer throw or critcital success can be thrown from the bushes. Will trap any low flying discs without a critical success. Max throw distance from bushes is sharply reduced.
 
 Rough: reduce maximum throw distance
 Sand: significant reduction in max throw.

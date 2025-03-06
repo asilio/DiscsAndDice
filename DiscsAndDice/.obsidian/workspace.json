@@ -6,22 +6,37 @@
       {
         "id": "10f3f8594cf92cf3",
         "type": "tabs",
+        "dimension": 82.19794344473009,
         "children": [
           {
             "id": "06086691646b979d",
             "type": "leaf",
             "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Gameplay.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24f46e100287fd1e",
+            "type": "leaf",
+            "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/Ideas.md"
+                "file": "Excalidraw/GameMath.excalidraw.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "9c665dd0e96d42e0",
         "type": "tabs",
+        "dimension": 17.802056555269925,
         "children": [
           {
             "id": "d9f7e7fc58c8d74a",
@@ -81,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 320.5
   },
   "right": {
     "id": "df6f46aadaceb112",
@@ -97,7 +112,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +128,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Ideas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -136,9 +149,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Excalidraw/Ideas.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -159,10 +170,13 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "06086691646b979d",
+  "active": "d9f7e7fc58c8d74a",
   "lastOpenFiles": [
+    "Excalidraw/GameMath.excalidraw.md",
     "Gameplay.md",
     "Excalidraw/Ideas.md",
+    "Disc-Golf-Flight-Numbers.png",
+    "Whiteboard 3.png",
     "Discs and Dice.md",
     "Excalidraw"
   ]
