@@ -9,8 +9,23 @@ const HEIGHT = canvas.height;
 const HALF_WIDTH = WIDTH/2;
 const HALF_HEIGHT = HEIGHT/2;
 
+document.addEventListener('keyup', (event)=>{
+	switch(event.code){
+		case 'KeyA':
+		case 'ArrowLeft':
+			DiscWorld.rotateWorldCounterClockwise();
+			break;
+		case 'ArrowRight':
+		case 'KeyD':
+			DiscWorld.rotateWorldClockwise();
+			break;
+		default:
+			break;
+	}
+});
+
 function main(){
-	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,HALF_HEIGHT]);
+	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,0]);
 	requestAnimationFrame(main);
 }
 
