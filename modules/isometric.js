@@ -27,12 +27,12 @@ class World{
 
 	rotateWorldCounterClockwise(){
 		this.rotation = (this.rotation+90)%360;
-		this.rotatedCorners = map(this.pointFromWorldRotation,this.corners);
+		this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
 		
 	}
 	rotateWorldClockwise(){
 		this.rotation = (this.rotation-90)%360;
-		this.rotatedCorners = map(this.pointFromWorldRotation,this.corners);
+		this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
 	}
 
 	pointFromWorldRotation(point){
@@ -75,8 +75,8 @@ class World{
 		for(let x_world = 0; x_world<this.width;x_world++){
 			for(let y_world = 0;y_world<this.length;y_world++){
 				 context.fillStyle = `rgb(
-					${Math.floor(255 - 42.5 * x_world)}
-					${Math.floor(255 - 42.5 * y_world)}
+					${Math.floor(255 - 255/this.width * x_world)}
+					${Math.floor(255 - 255/this.length * y_world)}
 					0)`;
 				let x,y;
 				[x,y]=this.pointToScreen([x_world,y_world],screen_target);
