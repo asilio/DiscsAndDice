@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "86c88476d458e9c2",
+    "type": "split",
+    "children": [
+      {
+        "id": "10f3f8594cf92cf3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf63ffdeb764b319",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Discs and Dice.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "06086691646b979d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Discs and Dice.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "9c665dd0e96d42e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d9f7e7fc58c8d74a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "54f32cc44082dffe",
+    "type": "split",
+    "children": [
+      {
+        "id": "3dfbe6dc6c313ef8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3cfb1b0e9965ba64",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e09a3a5a90f36f0d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f52f3ec2a6eed78f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "df6f46aadaceb112",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a62c14ae254f236",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d6b54fdb83667bf1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Discs and Dice.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31696e31c3e5f15d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Discs and Dice.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fd3a11c45dfe0357",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0b3393c5bd1b7ede",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Discs and Dice.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New drawing": false
+    }
+  },
+  "active": "06086691646b979d",
+  "lastOpenFiles": [
+    "Excalidraw/Ideas Whiteboard.md",
+    "Discs and Dice.md",
+    "Excalidraw"
+  ]
+}
