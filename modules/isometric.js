@@ -75,8 +75,8 @@ class World{
 		for(let x_world = 0; x_world<this.width;x_world++){
 			for(let y_world = 0;y_world<this.length;y_world++){
 				 context.fillStyle = `rgb(
-					${Math.floor(255 - 255/this.width * x_world)}
-					${Math.floor(255 - 255/this.length * y_world)}
+					${Math.floor(255 - 200/this.width * x_world)}
+					${Math.floor(255 - 200/this.length * y_world)}
 					0)`;
 				let x,y;
 				[x,y]=this.pointToScreen([x_world,y_world],screen_target);
