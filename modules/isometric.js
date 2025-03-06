@@ -27,12 +27,12 @@ class World{
 
 	rotateWorldCounterClockwise(){
 		this.rotation = (this.rotation+90)%360;
-		this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
+		//this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
 		
 	}
 	rotateWorldClockwise(){
 		this.rotation = (this.rotation-90)%360;
-		this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
+		//this.rotatedCorners = this.corners.map(this.pointFromWorldRotation);
 	}
 
 	pointFromWorldRotation(point){
