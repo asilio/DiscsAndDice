@@ -3,7 +3,7 @@ Gameplay: isometric 3d tile set of terrain:  fairways, tree hazards and other di
 Player has extra dice they can use anytime a roll is called for, but once used they lose the extra die. Required rolls always provide the indicated die. Each hole new dice are added for each player. Players can improve their character in different ways at the end of each hole. 
 
 When multiple dice are rolled, player chooses the die to use (allows control for certain penalties positioning)
-
+[[Ideas Whiteboard]]
 Terminology:
 With advantage \[ x \] means \[x\] bonus dice of the same type are rolled.
 With disadvantage \[x\]  player loses the ability to choose and the lowest die is always picked from dice rolled.
