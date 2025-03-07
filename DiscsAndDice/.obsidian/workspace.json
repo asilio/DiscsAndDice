@@ -6,7 +6,6 @@
       {
         "id": "10f3f8594cf92cf3",
         "type": "tabs",
-        "dimension": 82.19794344473009,
         "children": [
           {
             "id": "06086691646b979d",
@@ -17,7 +16,9 @@
                 "file": "Gameplay.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Gameplay"
             }
           },
           {
@@ -27,26 +28,13 @@
               "type": "excalidraw",
               "state": {
                 "file": "Excalidraw/Ideas.md"
-              }
+              },
+              "icon": "excalidraw-icon",
+              "title": "Ideas"
             }
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "9c665dd0e96d42e0",
-        "type": "tabs",
-        "dimension": 17.802056555269925,
-        "children": [
-          {
-            "id": "d9f7e7fc58c8d74a",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -65,8 +53,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -81,7 +72,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -89,7 +82,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -120,7 +115,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Ideas"
             }
           },
           {
@@ -132,7 +129,9 @@
                 "file": "Excalidraw/Ideas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Ideas"
             }
           },
           {
@@ -142,8 +141,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -152,8 +155,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Ideas.md"
-              }
+                "file": "Excalidraw/Ideas.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Ideas"
             }
           }
         ]
@@ -177,8 +185,8 @@
   "active": "24f46e100287fd1e",
   "lastOpenFiles": [
     "Excalidraw/GameMath.excalidraw.md",
-    "Gameplay.md",
     "Excalidraw/Ideas.md",
+    "Gameplay.md",
     "Disc-Golf-Flight-Numbers.png",
     "Whiteboard 3.png",
     "Discs and Dice.md",
