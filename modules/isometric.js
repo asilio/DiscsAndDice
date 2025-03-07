@@ -67,9 +67,10 @@ function column_of_matrix(column, matrix){
 }
 
 function matrix_multiply_vector(matrix,vector){
-	if(matrix.length!=vector.length) throw new Error(`Matrix dimension mismatch with vector ${matrix.length} != ${vector.length}`);
+	if(matrix[0].length!=vector.length) throw new Error(`Matrix dimension mismatch with vector , matrix row length = ${matrix[0].length} != ${vector.length}`);
 	let result = [];
 	for(let row = 0;row<matrix.length;row++){
+		console.log(matrix[row]);
 		result.push(vector_multiply(matrix[row], vector));
 	}	
 	return result;
@@ -82,8 +83,8 @@ T0 maps world coordinates to unscaled or translated pixel coordinates.
 T0_inv maps pixel coordinates that *have* been translated back to unscaled world coordinates.
 */
 const T0=[
-		[1  , -1 ], 
-		[1/2, 1/2]
+		[1  , -1 , 0], 
+		[1/2, 1/2, -1/2]
 	];
 const T0_inv = [
 		[1/2 , 1 ],
@@ -91,24 +92,24 @@ const T0_inv = [
 	];
 
 const T90 = [
-		[1    , 1  ],
-		[-1/2 ,1/2 ]
+		[1    , 1 , 0    ],
+		[-1/2 ,1/2, -1/2 ]
 	];
 const T90_inv = [
 		[1/2, -1],
 		[1/2,  1]
 	];
 const T180 = [
-		[-1  ,   1 ],
-		[-1/2, -1/2]
+		[-1  ,   1 , 0   ],
+		[-1/2, -1/2, -1/2]
 	];
 const T180_inv = [
 		[-1/2, -1],
 		[1/2 , -1]
 	];
 const T270 = [
-		[-1 , -1  ],
-		[1/2, -1/2]
+		[-1 , -1  , 0   ],
+		[1/2, -1/2, -1/2]
 	];
 const T270_inv = [
 		[-1/2,  1],
@@ -155,16 +156,19 @@ class World{
 	}
 
 	PixelToWorldCoordinate(point, C){
-		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,C));
+		let D = vector_add(C, [this.width/2, this.height/2]);
+		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,D));
 	}
 
 	WorldToPixelCoordinate(point, C){
-		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),C);
+		let D = vector_add(C, [this.width/2, this.height/2]);
+		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),D);
 	}
 
 	drawGridToScreenAt(context,screen_target){
 		for(let x_world = 0; x_world<this.width;x_world++){
 			for(let y_world = 0;y_world<this.length;y_world++){
+				for(let z_world = 0; z_world <2; z++)
 				 context.fillStyle = `rgb(
 					${Math.floor(255 - 200/this.width * x_world)}
 					${Math.floor(255 - 200/this.length * y_world)}
