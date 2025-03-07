@@ -192,10 +192,10 @@ class World{
 		for(let i = 0; i<render_order.length;i++){
 			[x_world, y_world, z_world] = render_order[i];
 	
-			 context.fillStyle = `rgb(
-				${Math.floor(255 - 200/this.width * x_world)}
-				${Math.floor(255 - 200/this.length * y_world)}
-				${Math.floor(0 + 100 * z_world)})`;
+			// context.fillStyle = `rgb(
+			//	${Math.floor(255 - 200/this.width * x_world)}
+			//	${Math.floor(255 - 200/this.length * y_world)}
+			//	${Math.floor(0 + 100 * z_world)})`;
 
 			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
 			//
