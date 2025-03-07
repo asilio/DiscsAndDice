@@ -119,6 +119,7 @@ class World{
 	constructor(width, length,unit_length = 16){
 		this.width = width; //horizontal;
 		this.length = length; //vertical;
+		this.center = [this.width/2, this.length/2];
 		this.unit_length=unit_length;
 		this.rotation = 0;
 		this.corners = [ 
@@ -177,12 +178,12 @@ class World{
 	}
 
 	PixelToWorldCoordinate(point, C){
-		let D = vector_sub(C, [this.width/2, this.height/2]);
-		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,D));
+		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,C));
 	}
 
 	WorldToPixelCoordinate(point, C){
-		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),C);
+		let D = vector_sub(point,this.center);
+		return vector_add(matrix_multiply_vector(this.T[this.rotation], D),C);
 	}
 
 	drawGridToScreenAt(context,screen_target){
