@@ -186,7 +186,7 @@ class World{
 				${Math.floor(255 - 200/this.width * x_world)}
 				${Math.floor(255 - 200/this.length * y_world)}
 				${Math.floor(0 + 100 * z_world)})`;
-			z_world = Math.floor(Math.random()*10);
+
 			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
 			//
 			context.drawImage(this.sprite, x-this.width/2, y);
@@ -207,7 +207,10 @@ function grid(width,length, unit = 1){
 	let result = [];
 	for(let x=0;x<=width;){
 		for(let y = 0;y<=length;){
-			result.push([x,y,0]);
+			//Just for debuggin/visualizing
+			let z = Math.floor(Math.random()*10);
+			//
+			result.push([x,y,z]);
 			y+=unit;
 		}
 		x+=unit;
