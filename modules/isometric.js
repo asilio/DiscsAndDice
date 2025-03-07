@@ -152,8 +152,18 @@ class World{
 
 
 		//For debugging only
-		this.sprite = new Image();
-		this.sprite.src = "./assets/isocube.png";
+		this.sprites =[];
+		this.sprites[0] = new Image();
+		this.sprites[0].src = "./assets/isocube.png";
+
+		this.sprites[1] = new Image();
+		this.sprites[1].src = "./assets/isocube1.png";
+
+		this.sprites[2] = new Image();
+		this.sprites[2].src = "./assets/isocube2.png";
+
+		this.sprites[3] = new Image();
+		this.sprites[3].src = "./assets/isocube3.png";
 
 	}
 
@@ -189,7 +199,7 @@ class World{
 
 			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
 			//
-			context.drawImage(this.sprite, x-this.width/2, y);
+			context.drawImage(this.sprites[this.rotation], x-this.width/2, y);
 			//
 			context.beginPath();
 			context.arc(x,y,2,0,2*PI);
