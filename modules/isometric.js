@@ -146,11 +146,12 @@ class World{
 	}
 
 	rotateWorldCounterClockwise(){
-		this.rotation = abs((this.rotation+1)%4);
+		this.rotation = (this.rotation+1)%4;
 	}
 
 	rotateWorldClockwise(){
-		this.rotation = abs((this.rotation-1)%4);
+		this.rotation = (this.rotation-1)%4;
+		if(this.rotation<0) this.rotation = 3;
 	}
 
 	PixelToWorldCoordinate(point, C){
