@@ -8,17 +8,22 @@ const WIDTH = canvas.width;
 const HEIGHT = canvas.height;
 const HALF_WIDTH = WIDTH/2;
 const HALF_HEIGHT = HEIGHT/2;
-
+const C = [HALF_WIDTH, HALF_HEIGHT/2];
 document.addEventListener('keyup', (event)=>{
 	switch(event.code){
 		case 'KeyA':
 		case 'ArrowLeft':
-			DiscWorld.rotateWorldCounterClockwise();
+			C-=32;
 			break;
 		case 'ArrowRight':
 		case 'KeyD':
-			DiscWorld.rotateWorldClockwise();
+			C+=32
 			break;
+		case 'KeyE':
+			DiscWorld.rotateWorldCounterClockwise();
+			break;
+		case 'KeyQ':
+			DiscWorld.rotateWorldClockwise();
 		default:
 			break;
 	}
@@ -26,7 +31,7 @@ document.addEventListener('keyup', (event)=>{
 
 function main(){
 	context.clearRect(0,0,context.canvas.width,context.canvas.height);
-	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,HALF_HEIGHT]);
+	DiscWorld.drawGridToScreenAt(context,C);
 	requestAnimationFrame(main);
 }
 
