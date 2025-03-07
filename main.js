@@ -26,7 +26,7 @@ document.addEventListener('keyup', (event)=>{
 
 function main(){
 	context.clearRect(0,0,context.canvas.width,context.canvas.height);
-	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,5]);
+	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,HALF_HEIGHT]);
 	requestAnimationFrame(main);
 }
 
