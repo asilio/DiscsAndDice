@@ -186,10 +186,10 @@ class World{
 				${Math.floor(255 - 200/this.width * x_world)}
 				${Math.floor(255 - 200/this.length * y_world)}
 				${Math.floor(0 + 100 * z_world)})`;
-
+			z_world = Math.floor(Math.random()*10);
 			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
 			//
-			context.drawImage(this.sprite, x, y);
+			context.drawImage(this.sprite, x-this.width/2, y);
 			//
 			context.beginPath();
 			context.arc(x,y,2,0,2*PI);
