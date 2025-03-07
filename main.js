@@ -1,7 +1,7 @@
 import {World} from "./modules/isometric.js"
 
 //create 30 x 40 world grid
-const DiscWorld = new World(30,40);
+const DiscWorld = new World(30,40,32);
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 const WIDTH = canvas.width;
@@ -25,7 +25,7 @@ document.addEventListener('keyup', (event)=>{
 });
 
 function main(){
-	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,0]);
+	DiscWorld.drawGridToScreenAt(context,[HALF_WIDTH,5]);
 	requestAnimationFrame(main);
 }
 
