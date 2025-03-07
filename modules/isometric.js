@@ -142,6 +142,12 @@ class World{
 			scalar_matrix_multiply(B,T90_inv), 
 			scalar_matrix_multiply(B,T180_inv),
 			scalar_matrix_multiply(B,T270_inv)];
+		this.grid = grid(this.width, this.height);
+		this.render_order = [];
+		this.render_order[0] = this.grid.toSorted(rotation0sort);
+		this.render_order[1] = this.grid.toSorted(rotation1sort);
+		this.render_order[2] = this.grid.toSorted(rotation2sort);
+		this.render_order[3] = this.grid.toSorted(rotation3sort);
 
 	}
 
@@ -164,29 +170,68 @@ class World{
 	}
 
 	drawGridToScreenAt(context,screen_target){
-		for(let x_world = 0; x_world<this.width;x_world++){
-			for(let y_world = 0;y_world<this.length;y_world++){
-				for(let z_world = 0; z_world <2;){
-					 context.fillStyle = `rgb(
-						${Math.floor(255 - 200/this.width * x_world)}
-						${Math.floor(255 - 200/this.length * y_world)}
-						${Math.floor(0 + 100 * z_world)})`;
-						 z_world+=2;
-
-					let x,y;
-					[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
-					context.beginPath();
-					context.arc(x,y,2,0,2*PI);
-					context.fill();
-					context.closePath();
-				}
-			}
+		let x_world, y_world, z_world;
+		let x, y;
+		let render_order = this.render_order[this.rotation];
+		for(let i = 0; i<render_order.length;i++){
+			[x_world, y_world, z_world] = render_order[i];
+	
+			 context.fillStyle = `rgb(
+				${Math.floor(255 - 200/this.width * x_world)}
+				${Math.floor(255 - 200/this.length * y_world)}
+				${Math.floor(0 + 100 * z_world)})`;
+			
+			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
+			context.beginPath();
+			context.arc(x,y,2,0,2*PI);
+			context.fill();
+			context.closePath();
 		}
 	}
 }
 
 function euclidean_metric(x,y){
 	return sqrt(pow(x,2)+pow(y,2));
+}
+
+function grid(width,length, unit = 1){
+	let result = [];
+	for(let x=0;x<=width;){
+		for(let y = 0;y<=length;){
+			result.push([x,y,0]);
+			y+=unit;
+		}
+		x+=unit;
+	}
+	return result;
+}
+
+function rotation0sort(grid_point1, grid_point2){
+	let test = grid_point1[0]-grid_point2[0];
+	if(test<0) return test;
+	if(test>0) return test;
+	return grid_point1[1] - grid_point2[1];
+}
+
+function rotation1sort(grid_point1, grid_point2){
+	let test = grid_point1[1]-grid_point2[1];
+	if(test<0) return test;
+	if(test>0) return test;
+	return grid_point2[0] - grid_point1[0];
+}
+
+function rotation2sort(grid_point1, grid_point2){
+	let test = grid_point2[0]-grid_point1[0];
+	if(test<0) return test;
+	if(test>0) return test;
+	return grid_point2[1] - grid_point1[1];
+}
+
+function rotation3sort(grid_point1, grid_point2){
+	let test = grid_point2[1]-grid_point1[1];
+	if(test<0) return test;
+	if(test>0) return test;
+	return grid_point1[0] - grid_point2[0];
 }
 
 export {World};
