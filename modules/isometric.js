@@ -70,7 +70,6 @@ function matrix_multiply_vector(matrix,vector){
 	if(matrix[0].length!=vector.length) throw new Error(`Matrix dimension mismatch with vector , matrix row length = ${matrix[0].length} != ${vector.length}`);
 	let result = [];
 	for(let row = 0;row<matrix.length;row++){
-		console.log(matrix[row]);
 		result.push(vector_multiply(matrix[row], vector));
 	}	
 	return result;
