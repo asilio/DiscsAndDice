@@ -218,7 +218,7 @@ function grid(width,length, unit = 1){
 	for(let x=0;x<=width;){
 		for(let y = 0;y<=length;){
 			//Just for debuggin/visualizing
-			let z = Math.floor(Math.random()*2);
+			let z = Math.floor(Math.random()*10)%5;
 			//
 			result.push([x,y,z]);
 			y+=unit;
