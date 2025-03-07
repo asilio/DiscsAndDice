@@ -160,7 +160,7 @@ class World{
 	}
 
 	WorldToPixelCoordinate(point, C){
-		return vector_add(matrix_multiply_vector(this.T[this.rotation], vector_sub(point,[this.width/2,this.height/2,0])),C);
+		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),C);
 	}
 
 	drawGridToScreenAt(context,screen_target){
