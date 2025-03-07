@@ -142,12 +142,18 @@ class World{
 			scalar_matrix_multiply(B,T90_inv), 
 			scalar_matrix_multiply(B,T180_inv),
 			scalar_matrix_multiply(B,T270_inv)];
-		this.grid = grid(this.width, this.height);
+
+		this.grid = grid(this.width, this.length);
 		this.render_order = [];
 		this.render_order[0] = this.grid.toSorted(rotation0sort);
 		this.render_order[1] = this.grid.toSorted(rotation1sort);
 		this.render_order[2] = this.grid.toSorted(rotation2sort);
 		this.render_order[3] = this.grid.toSorted(rotation3sort);
+
+
+		//For debugging only
+		this.sprite = new Image();
+		this.sprite.src = "./assets/isocube.png";
 
 	}
 
@@ -180,8 +186,11 @@ class World{
 				${Math.floor(255 - 200/this.width * x_world)}
 				${Math.floor(255 - 200/this.length * y_world)}
 				${Math.floor(0 + 100 * z_world)})`;
-			
+
 			[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
+			//
+			context.drawImage(this.sprite, x, y);
+			//
 			context.beginPath();
 			context.arc(x,y,2,0,2*PI);
 			context.fill();
