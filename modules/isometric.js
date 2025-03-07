@@ -167,11 +167,12 @@ class World{
 	drawGridToScreenAt(context,screen_target){
 		for(let x_world = 0; x_world<this.width;x_world++){
 			for(let y_world = 0;y_world<this.length;y_world++){
-				for(let z_world = 0; z_world <2; z_world++){
+				for(let z_world = 0; z_world <20;){
 					 context.fillStyle = `rgb(
 						${Math.floor(255 - 200/this.width * x_world)}
 						${Math.floor(255 - 200/this.length * y_world)}
 						${Math.floor(0 + 100 * z_world)})`;
+						 z_world+=2;
 
 					let x,y;
 					[x,y]=this.WorldToPixelCoordinate([x_world,y_world,z_world],screen_target);
