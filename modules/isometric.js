@@ -119,7 +119,7 @@ class World{
 	constructor(width, length,unit_length = 16){
 		this.width = width; //horizontal;
 		this.length = length; //vertical;
-		this.center = [this.width/2, this.length/2];
+		this.center = [this.width/2, this.length/2,0];
 		this.unit_length=unit_length;
 		this.rotation = 0;
 		this.corners = [ 
