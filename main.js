@@ -15,7 +15,7 @@ document.addEventListener('keyup', (event)=>{
 		case 'KeyW':
 			C[1]-=32;
 			break;
-		case 'ArrowDown'
+		case 'ArrowDown':
 		case 'KeyS':
 			C[1]+=32;
 		case 'KeyA':
