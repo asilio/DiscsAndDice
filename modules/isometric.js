@@ -155,19 +155,19 @@ class World{
 	}
 
 	PixelToWorldCoordinate(point, C){
-		//let D = vector_add(C, [this.width/2, this.height/2]);
-		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,C));
+		let D = vector_add(C, [this.width/2, this.height/2]);
+		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,D));
 	}
 
 	WorldToPixelCoordinate(point, C){
-		//let D = vector_add(C, [this.width/2, this.height/2]);
-		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),C);
+		let D = vector_add(C, [this.width/2, this.height/2]);
+		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),D);
 	}
 
 	drawGridToScreenAt(context,screen_target){
 		for(let x_world = 0; x_world<this.width;x_world++){
 			for(let y_world = 0;y_world<this.length;y_world++){
-				for(let z_world = 0; z_world <20;){
+				for(let z_world = 0; z_world <2;){
 					 context.fillStyle = `rgb(
 						${Math.floor(255 - 200/this.width * x_world)}
 						${Math.floor(255 - 200/this.length * y_world)}
