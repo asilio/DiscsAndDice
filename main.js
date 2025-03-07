@@ -11,13 +11,20 @@ const HALF_HEIGHT = HEIGHT/2;
 const C = [HALF_WIDTH, HALF_HEIGHT/2];
 document.addEventListener('keyup', (event)=>{
 	switch(event.code){
+		case 'ArrowUp':
+		case 'KeyW':
+			C[1]-=32;
+			break;
+		case 'ArrowDown'
+		case 'KeyS':
+			C[1]+=32;
 		case 'KeyA':
 		case 'ArrowLeft':
-			C-=32;
+			C[0]-=32;
 			break;
 		case 'ArrowRight':
 		case 'KeyD':
-			C+=32
+			C[0]+=32
 			break;
 		case 'KeyE':
 			DiscWorld.rotateWorldCounterClockwise();
