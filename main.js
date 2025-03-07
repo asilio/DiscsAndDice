@@ -18,6 +18,7 @@ document.addEventListener('keyup', (event)=>{
 		case 'ArrowDown':
 		case 'KeyS':
 			C[1]+=32;
+			break;
 		case 'KeyA':
 		case 'ArrowLeft':
 			C[0]-=32;
