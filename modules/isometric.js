@@ -155,12 +155,12 @@ class World{
 	}
 
 	PixelToWorldCoordinate(point, C){
-		let D = vector_add(C, [this.width/2, this.height/2]);
+		//let D = vector_add(C, [this.width/2, this.height/2]);
 		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,D));
 	}
 
 	WorldToPixelCoordinate(point, C){
-		let D = vector_add(C, [this.width/2, this.height/2]);
+		//let D = vector_add(C, [this.width/2, this.height/2]);
 		return vector_add(matrix_multiply_vector(this.T[this.rotation], point),D);
 	}
 
