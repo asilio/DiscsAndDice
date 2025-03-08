@@ -4,7 +4,8 @@ const PI = Math.PI;
 const pow = Math.pow;
 const sqrt = Math.sqrt;
 const abs = Math.abs;
-/*
+/* We need some matrix operations for translating into and out of the isometric space
+
 2dMatrix:
 |a b| 
 |c d|
@@ -80,6 +81,8 @@ Transformation Matrices for various isometric setups
 0 degree (top point is (0,0)):
 T0 maps world coordinates to unscaled or translated pixel coordinates.
 T0_inv maps pixel coordinates that *have* been translated back to unscaled world coordinates.
+Note that these are not square, this is because the world will have a z-coordinate that maps "up" 1/2 a vertical unit
+
 */
 const T0=[
 		[1  , -1 , 0], 
@@ -153,6 +156,7 @@ class World{
 
 
 		//For debugging only
+		/*
 		this.sprites =[];
 		this.sprites[0] = new Image();
 		this.sprites[0].src = "./assets/isocube.png";
@@ -165,6 +169,7 @@ class World{
 
 		this.sprites[3] = new Image();
 		this.sprites[3].src = "./assets/isocube3.png";
+		*/
 
 	}
 
@@ -178,14 +183,17 @@ class World{
 	}
 
 	PixelToWorldCoordinate(point, C){
-		return matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,C));
+		//Offsets to the "center" of the world so rotations appear to rotate the plane about its middle
+		return vector_add(matrix_multiply_vector(this.T_inv[this.rotation], vector_sub(point,C)),this.center);
 	}
 
 	WorldToPixelCoordinate(point, C){
-		let D = vector_sub(point,this.center);
-		return vector_add(matrix_multiply_vector(this.T[this.rotation], D),C);
+		//Offsets to the "center" of the world so rotations appear to rotate the plane about its middle
+		return vector_add(matrix_multiply_vector(this.T[this.rotation], vector_sub(point,this.center)),C);
 	}
 
+	/*Debugging only, world is not responsible for drawing itself, only maintaining the rotation and 
+	  rendering order
 	drawGridToScreenAt(context,screen_target){
 		let x_world, y_world, z_world;
 		let x, y;
@@ -208,6 +216,7 @@ class World{
 			context.closePath();
 		}
 	}
+	*/
 }
 
 function euclidean_metric(x,y){
