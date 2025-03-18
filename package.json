@@ -1,0 +1,22 @@
+{
+  "name": "discsanddice",
+  "version": "1.0.0",
+  "description": "[Discs and Dice](DiscsAndDice/Gameplay.md)\r [Discs and Dice](DiscsAndDice/Discs and Dice.md)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asilio/DiscsAndDice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asilio/DiscsAndDice/issues"
+  },
+  "homepage": "https://github.com/asilio/DiscsAndDice#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
