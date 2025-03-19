@@ -1,5 +1,5 @@
 import {World} from "./modules/isometric.js"
-
+import {matrix_multiply_vector} from "./modules/math.js"
 //create 30 x 40 world grid
 const DiscWorld = new World(30,40,32);
 const canvas = document.getElementById('canvas');
@@ -39,8 +39,8 @@ document.addEventListener('keyup', (event)=>{
 
 function main(){
 	context.clearRect(0,0,context.canvas.width,context.canvas.height);
-	DiscWorld.drawGridToScreenAt(context,C);
+	//DiscWorld.drawGridToScreenAt(context,C);
 	requestAnimationFrame(main);
 }
 
-main();
+//main();
