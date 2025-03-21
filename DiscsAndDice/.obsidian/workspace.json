@@ -32,9 +32,21 @@
               "icon": "excalidraw-icon",
               "title": "Ideas"
             }
+          },
+          {
+            "id": "85f25d654d4fa33d",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/GameMath.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "GameMath.excalidraw"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -182,10 +194,11 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "24f46e100287fd1e",
+  "active": "85f25d654d4fa33d",
   "lastOpenFiles": [
-    "Excalidraw/GameMath.excalidraw.md",
     "Excalidraw/Ideas.md",
+    "Excalidraw/Game Engine Design.excalidraw.md",
+    "Excalidraw/GameMath.excalidraw.md",
     "Gameplay.md",
     "Disc-Golf-Flight-Numbers.png",
     "Whiteboard 3.png",
